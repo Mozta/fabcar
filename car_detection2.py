@@ -36,8 +36,10 @@ for (x,y,w,h) in cars:
     if(porcentaje > 10):
         if(x < (width/2)):
             cajon = 1
+            #Aqui iria el codigo para mover el motor hacia la izquierda
         else:
             cajon = 2
+            #Aqui iria el codigo para mover el motor hacia la derecha
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
         cv2.putText(img, "Carrito en cajon " + str(cajon)+ str(" : %2.2f" % porcentaje) + "%", (pos_x,pos_y), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255,255,0),4,cv2.LINE_AA)
     
